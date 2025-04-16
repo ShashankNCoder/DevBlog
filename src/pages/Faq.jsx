@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TestimonialSection = () => {
+const FAQSection = () => {
   const cardRef = useRef([]);
   const containerRef = useRef(null);
 
@@ -119,4 +119,4 @@ const TestimonialSection = () => {
   );
 };
 
-export default TestimonialSection;
+export default FAQSection;
