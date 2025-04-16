@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import FAQ from './faq.jsx';
 
+
 const Home = () => {
     const [posts, setPosts] = useState([])
     const [featuredPosts, setFeaturedPosts] = useState([])
