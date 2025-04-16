@@ -1,0 +1,28 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+}
+
+.animate-scroll > * {
+    flex: 0 0 auto;
+}
+
+.memory-card {
+    transition: all 0.3s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
