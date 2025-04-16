@@ -3,7 +3,7 @@ import { Container, PostCard, CategoryContent } from '../components';
 import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import FAQSection from './faq.jsx';
+import FAQ from './faq.jsx';
 
 const Home = () => {
     const [posts, setPosts] = useState([])
@@ -803,7 +803,7 @@ const Home = () => {
                             </div>
                         </motion.div>
                     </div>
-                    <FAQSection />
+                    <FAQ />
                 </motion.div>
             </div>
         )
