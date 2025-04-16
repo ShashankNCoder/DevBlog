@@ -3,7 +3,7 @@ import { Container, PostCard, CategoryContent } from '../components';
 import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import FAQSection from './faq';
+import FAQSection from './faq.jsx';
 
 const Home = () => {
     const [posts, setPosts] = useState([])
