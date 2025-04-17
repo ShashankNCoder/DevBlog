@@ -48,12 +48,6 @@ const Home = () => {
 
     useEffect(() => {
         try {
-            setLoading(true)
-            const storedPosts = JSON.parse(localStorage.getItem('posts') || '[]')
-            setFeaturedPosts(storedPosts.slice(0, 2))
-            setPosts(storedPosts.slice(2))
-            setLoading(false)
-
             // FAQ Cards Animation
             const cards = cardRef.current;
             const maxHeight = Math.max(...cards.map(card => card?.offsetHeight || 0));

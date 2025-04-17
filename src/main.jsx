@@ -10,12 +10,13 @@ import { lazy, Suspense } from 'react';
 import Contact from "./pages/Contact";
 import ProtectedRoute from './components/ProtectedRoute';
 
+import Home from './pages/Home';
+
 // Lazy load components
 const Login = lazy(() => import('./components/Login'));
 const Signup = lazy(() => import('./components/Signup'));
 const AllPost = lazy(() => import('./pages/AllPost'));
 const EditPost = lazy(() => import('./pages/EditPost'));
-const Home = lazy(() => import('./pages/Home'));
 const Post = lazy(() => import('./pages/Post'));
 
 // Lazy load additional pages
@@ -29,7 +30,7 @@ const router = createBrowserRouter(
       children: [
         {
           path: '/',
-          element: <Home />
+          element: <Suspense fallback={<div className="flex items-center justify-center h-full"><div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-white"></div></div>}><Home /></Suspense>
         },
         {
           path: '/login',

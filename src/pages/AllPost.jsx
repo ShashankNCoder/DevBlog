@@ -2,6 +2,7 @@ import { Container, PostCard, PostForm } from '../components/index';
 import { useState, useEffect } from 'react';
 import React from 'react';
 import { FiSearch, FiCalendar, FiType } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 function AllPosts() {
     const [posts, setPosts] = useState([])
@@ -134,9 +135,16 @@ function AllPosts() {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                     {paginatedPosts.map((post) => (
-                        <div key={post.id} className='w-full'>
-                            <PostCard {...post} />
-                        </div>
+                        <motion.div 
+                        key={post.id} 
+                        className='w-full'
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <PostCard {...post} />
+                    </motion.div>
                     ))}
                 </div>
                 {totalPages > 1 && (
